@@ -335,7 +335,7 @@ def find_devices(dl: BACnet_Data_Link):
                 vmac_len= resp[8]
                 vmac = resp[9:9+vmac_len].hex()
                 connect= f"BBMD Network : {network} vmac : {vmac}"
-                if vmac_len is 6:
+                if vmac_len == 6:
                      connect+= f"({decode_ip_port(resp[9:15])})"
                 resp=resp[11+vmac_len:]
             else:

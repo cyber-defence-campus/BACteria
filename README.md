@@ -129,7 +129,7 @@ Pull requests are welcome. For major changes, open an issue first to discuss you
 To contribute:
 
 ```bash
-git clone https://github.com/Adrinels/BACteria.git
+git clone https://github.com/cyber-defence-campus/BACteria.git
 cd BACteria
 # Start hacking!
 ```
