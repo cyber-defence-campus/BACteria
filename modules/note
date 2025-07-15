@@ -1,0 +1,17 @@
+set_property analog-value 714 present-value Real -5 and 739
+
+
+
+
+multi-state-value:10      name : CenShd'CenShdFnct'CenPrtShd'CenPrtShdCmdv          description : Central protection shading command value
+multi-state-value:43      name : B_01'Flr_01'RSegm1'Lgt(1)'ROpMod                   description : Room operating mode
+multi-state-value:44      name : B_01'Flr_01'RSegm1'Lgt(1)'PscOp'LgtPscMod          description : Lighting presence mode
+multi-state-value:45      name : B_01'Flr_01'RSegm1'Lgt(1)'PscOp'LgtOpStrgy         description : Lighting operating strategy
+multi-state-value:50      name : B_01'Flr_01'RSegm1'Lgt(1)'GrnLf'LgtEei             description : Energy efficiency indication lighting
+multi-state-value:52      name : CenShd'CenLgtFnct'CenFnctSta                       description : Central function state
+multi-state-value:55      name : CenShd'CenShdFnct'CenEmgShd'CenEmgShdCmdv          description : Central emergency shading, command value
+binary-value:246          name : B_01'Flr_01'R_2'RHvacCoo'RWndSta                   description : Room window state
+binary-value:234          name : B_01'Flr_01'R_1'RHvacCoo'RPscDet                   description : Room presence detection
+
+260:
+5093

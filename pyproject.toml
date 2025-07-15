@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BACteria"
+version = "0.1.0"
+description = "A simple discovery and pentest tool for BACnet services"
+authors = [
+    { name = "Visergon" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "websockets",
+    "aiofiles",
+    "colorama"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/my_project" # TODO: Update URL
+
+[project.classifiers]
+Programming_Language = "Python :: 3"
+Operating_System = "OS Independent"
