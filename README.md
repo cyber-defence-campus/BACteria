@@ -35,9 +35,17 @@ BACteria is a CLI-based offensive framework designed to test, fuzz, and exploit 
 > **Note:** BACteria is intended for legal use only by authorized professionals on systems you own or have explicit permission to test.
 
 ```bash
-git clone https://github.com/yourusername/bacteria.git
-cd bacteria
-python3 -m pip install -r requirements.txt
+git clone https://github.com/cyber-defence-campus/BACteria.git
+cd BACteria
+
+# Use a virtualenv to avoid system-Python restrictions
+python3 -m venv .venv
+. .venv/bin/activate
+
+# Build and install
+python -m pip install -U pip build installer
+python -m build --wheel
+python -m pip install --force-reinstall dist/*.whl
 ```
 
 ---
@@ -51,6 +59,8 @@ When BACteria starts, it will automatically scan the target device if no port is
 ### CLI Startup
 
 ```bash
+$ bacteria <ip> <port>
+<or>
 $ python3 cli.py <ip> <port>
 ```
 
