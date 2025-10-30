@@ -440,7 +440,7 @@ class FuzzingCLI:
                     fail(f"Action stopped by Keyboard Interrupt")
 
 
-if __name__ == "__main__":
+def main(argv=None):
     parser = argparse.ArgumentParser(description="Fuzzing CLI Argument Parser")
     parser.add_argument("target_ip", type=str, help="Target IP address")
     parser.add_argument("target_port", type=int, nargs="?", help="Target Port number (optional)")
@@ -463,3 +463,7 @@ if __name__ == "__main__":
         cli.start()
     except KeyboardInterrupt:
                     fail(f"Exiting...")
+                
+if __name__ == "__main__":
+    main()
+

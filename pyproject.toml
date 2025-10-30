@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -17,9 +17,29 @@ dependencies = [
     "colorama"
 ]
 
-[project.urls]
-Homepage = "https://github.com/yourusername/my_project" # TODO: Update URL
 
-[project.classifiers]
-Programming_Language = "Python :: 3"
-Operating_System = "OS Independent"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+bacteria = "cli:main"
+bacteria-cli = "cli:main"
+
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bacnet*", "modules*"]
+exclude = ["rsc*", "cert*"]
+
+[tool.setuptools]
+py-modules = ["cli", "utils", "inputs", "decoded_value"]
+
+include-package-data = true
+
+
+[tool.setuptools.data-files]
+"share/BACteria/rsc" = ["rsc/**/*"]
+"share/BACteria/cert" = ["cert/**/*"]
